@@ -1,0 +1,249 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is sample node js swagger api.",
+    "version": "1.0.0",
+    "title": "Swagger Uber"
+  },
+  "contact": {
+    "email": "aflakarshi@gmail.com"
+  },
+  "host": "localhost:3900",
+  "basePath": "/api/v1",
+  "schemes": ["http", "https"],
+  "paths": {
+    "/users": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Add a new user",
+        "description": "",
+        "operationId": "addUser",
+        "consumes": ["application/json", "application/xml"],
+        "produces": ["application/xml", "application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "User object that needs to be added to the store",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "get": {
+        "tags": ["User"],
+        "summary": "Returns user",
+        "description": "Returns a user",
+        "operationId": "getUser",
+        "produces": ["application/json"],
+        "security": {
+            "JWT": []
+        },
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/login": {
+      "post": {
+        "tags": ["User"],
+        "summary": "Login a user",
+        "description": "",
+        "operationId": "loginUser",
+        "consumes": ["application/json", "application/xml"],
+        "produces": ["application/xml", "application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "User object that needs to be added to the store",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Login"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "tags": ["User"],
+        "summary": "Find user by ID",
+        "description": "For valid response try integer IDs with value >= 1 and <= 10.         Other values will generated exceptions",
+        "operationId": "getUserId",
+        "produces": ["application/xml", "application/json"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of user that needs to be fetched",
+            "required": true,
+            "type": "integer",
+            "maximum": 10,
+            "minimum": 1,
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Order"
+            }
+          },
+          "400": {
+            "description": "Invalid ID user"
+          },
+          "404": {
+            "description": "User not found"
+          }
+        }
+      }
+    },
+    "/cabs": {
+      "get": {
+        "tags": ["Cab"],
+        "summary": "Returns cabs",
+        "description": "Returns a cab",
+        "operationId": "getCab",
+        "produces": ["application/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "JWT": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "parameters": {
+    "Filter": {
+      "name": "filter[column]",
+      "in": "query",
+      "description": "Specifies filter criteria for limiting the results returned. Format is filter[column]=value where field is one of the fields in the object. Another possible format is filter[type][column]=value where type can be like, gt, lt, gte, lte, not.",
+      "required": false,
+      "type": "string"
+    },
+    "FilterType": {
+      "name": "filter[type][column]",
+      "in": "query",
+      "description": "Specifies filter criteria for limiting the results returned. Format is filter[type][column]=value where type can be like, gt, lt, gte, lte, not and column is the name of the column to filter on.",
+      "required": false,
+      "type": "string"
+    },
+    "FilterId": {
+      "name": "filter[column]",
+      "in": "query",
+      "description": "Specifies filter criteria for limiting the results returned. Only relationships can be filtered for this route. Format is filter[relationship.column]=value where relationship is a relation defined in 'include' parameter and column is a column on the relation. Another possible format is filter[type][column]=value where type can be like, gt, lt, gte, lte, not.",
+      "required": false,
+      "type": "string"
+    },
+    "FilterTypeId": {
+      "name": "filter[type][column]",
+      "in": "query",
+      "description": "Specifies filter criteria for limiting the results returned. Only relationships can be filtered for this route. Specifies filter criteria for limiting the results returned. Format is filter[type][column]=value where type can be like, gt, lt, gte, lte, not and relationship is a relation defined in 'include' parameter and column is a column on the relation. Another possible format is filter[type][column]=value where type can be like, gt, lt, gte, lte, not.",
+      "required": false,
+      "type": "string"
+    },
+    "Fields": {
+      "name": "fields",
+      "in": "query",
+      "description": "Specifies which columns in the table to retrieve. Format is fields[table]=columns where table is the name of the table for the query, and columns is a comma separated list of the columns to retrieve. To specify columns to be retrieved on a relationship, table should be the name of the relationship as described in the 'include' parameter.",
+      "required": false,
+      "type": "string"
+    },
+    "Sort": {
+      "name": "sort",
+      "in": "query",
+      "description": "Field in object to sort results by in ascending order. Prepend a dash to sort results in a descending order. Sorting can also be performed by using dot notation (eg. sort=owner.firstName)",
+      "required": false,
+      "type": "string"
+    },
+    "PageLimit": {
+      "name": "page[limit]",
+      "in": "query",
+      "description": "Maximum number of entries to be returned in a single query. Use page[offset] parameter to specify a starting point, default is 0.",
+      "required": false,
+      "type": "integer"
+    },
+    "PageOffset": {
+      "name": "page[offset]",
+      "in": "query",
+      "description": "Starting offset to return multipaged values from.",
+      "required": false,
+      "type": "integer"
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "properties": {
+        "fullName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "accountStatus": {
+          "type": "boolean"
+        }
+      },
+      "xml": {
+        "name": "User"
+      }
+    },
+    "Login": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "User"
+      }
+    }
+  }
+}
