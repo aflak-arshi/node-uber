@@ -1,6 +1,7 @@
 'use strict';
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/dbConfig');
+const User = require('./user');
 
 const Cabs = sequelize.define('Cab', {
     cabName: DataTypes.STRING,
@@ -11,10 +12,16 @@ const Cabs = sequelize.define('Cab', {
     country: DataTypes.STRING,
     state: DataTypes.STRING,
     city: DataTypes.STRING,
-    area: DataTypes.STRING
+    area: DataTypes.STRING,
+    driverId: DataTypes.INTEGER,
+    status: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true
+    }
   }, {});
-  Cabs.associate = function(models) {
-    Order.belongsTo(models.User);
-  };
+
+
+Cabs.belongsTo(User, { foreignKey: 'driverId', targetKey: 'id' });
+
 
 module.exports = Cabs;

@@ -12,6 +12,7 @@ const globalErrorMiddleware = require('./app/middlewares/appErrorHandler');
 const morgan = require('morgan');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
+const { rateLimiter } = require('./app/middlewares/rateLimiter');
 
 app.use(morgan('dev'));
 
@@ -22,24 +23,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routeLoggerMiddleware.logIp);
 app.use(globalErrorMiddleware.globalErrorHandler);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-// const modelsPath = './app/models';
-const controllersPath = './app/controllers';
-const libsPath = './app/libs';
-const middlewaresPath = './app/middlewares';
 const routesPath = './app/routes';
 
-  
-// app.all('*', function(req, res, next) {
-//     res.header("Access-Control-Allow-Origin", "*");
-//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-//     next();
-// });
+// Express API rate limiter 
+app.use(rateLimiter);
 
-// // Bootstrap models
-// fs.readdirSync(modelsPath).forEach(function (file) {
-//     if (~file.indexOf('.js')) require(modelsPath + '/' + file);
-// });
 
 // Bootstrap route
 fs.readdirSync(routesPath).forEach(function (file) {

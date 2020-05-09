@@ -11,8 +11,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Akurdi',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Mahindra',
@@ -24,8 +25,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Akurdi',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Suzuki',
@@ -37,8 +39,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Akurdi',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Acura',
@@ -50,8 +53,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Yerwada',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Mahindra',
@@ -63,8 +67,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Yerwada',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Suzuki',
@@ -76,8 +81,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Warje',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Acura',
@@ -89,8 +95,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Wanowrie',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Mahindra',
@@ -102,8 +109,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Wanowrie',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Suzuki',
@@ -115,8 +123,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Wanowrie',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Acura',
@@ -128,8 +137,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Wagholi',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Mahindra',
@@ -141,8 +151,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Wagholi',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Alto',
@@ -154,8 +165,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Wagholi',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Alto',
@@ -167,8 +179,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Wadgaon Sheri',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Honda',
@@ -180,8 +193,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Vadgaon Pune',
     area: 'Vadgaon Budruk',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Ford',
@@ -193,8 +207,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Vadgaon Khurd',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Toyota',
@@ -206,8 +221,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Vitthalwadi',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Volkswagen',
@@ -219,8 +235,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Vishrantwadi',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Hyundai',
@@ -232,8 +249,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Undri',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Kia',
@@ -245,8 +263,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Sus',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Isuzu',
@@ -258,8 +277,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Shivane',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Renault',
@@ -271,8 +291,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Pirangut',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Renault',
@@ -284,8 +305,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Pashan',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Isuzu',
@@ -297,8 +319,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Panmala',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Hyundai',
@@ -310,8 +333,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Parvati',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Hyundai',
@@ -323,8 +347,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Nanded',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Hyundai',
@@ -336,8 +361,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Mundhwa',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Honda',
@@ -349,8 +375,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Mohammed Wadi',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Honda',
@@ -362,8 +389,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Markal',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Honda',
@@ -375,8 +403,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Manjri',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Mahindra',
@@ -388,8 +417,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Kothrud',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Kia',
@@ -401,8 +431,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Koregaon Park',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Kia',
@@ -414,8 +445,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Kondhwa',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Kia',
@@ -427,8 +459,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Kharadi',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Isuzu',
@@ -440,8 +473,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Khadki',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Isuzu',
@@ -453,8 +487,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Katraj',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Isuzu',
@@ -466,8 +501,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Kalas',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Isuzu',
@@ -479,8 +515,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Karve Nagar',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Hyundai',
@@ -492,8 +529,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Hadapsar',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Hyundai',
@@ -505,8 +543,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Ghorpadi',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Hyundai',
@@ -518,8 +557,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Fursungi',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Hyundai',
@@ -531,8 +571,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Erandwane',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Ford',
@@ -544,8 +585,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Aundh',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Mahindra',
@@ -557,8 +599,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Baner',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Ford',
@@ -570,8 +613,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Baner',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Ford',
@@ -583,8 +627,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Bavdhan',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Ford',
@@ -596,8 +641,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Balewadi',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Mahindra',
@@ -609,8 +655,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Dhanori',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Acura',
@@ -622,8 +669,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'NIBM',
     area: 'Pune Station',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Mahindra',
@@ -635,8 +683,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'NIBM',
     area: 'Pune Station',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Mahindra',
@@ -648,8 +697,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'NIBM',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Mahindra',
@@ -661,8 +711,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Kausar baugh',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Mahindra',
@@ -674,8 +725,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Kausar baugh',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Acura',
@@ -687,8 +739,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Camp',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Mahindra',
@@ -700,8 +753,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Camp',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Kia',
@@ -713,8 +767,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Camp',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Acura',
@@ -726,8 +781,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Pune Station',
+    driverId: 2,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Mahindra',
@@ -739,8 +795,9 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Pune Station',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
   {
     cabName: 'Kia',
@@ -752,18 +809,15 @@ const CABS = [
     state: 'Maharashtra',
     city: 'Pune',
     area: 'Pune Station',
+    driverId: 1,
     createdAt: new Date(),
-    updatedAt: new Date()
+    updatedAt: new Date(),
   },
 ];
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert(
-      'Cabs',
-      CABS,
-      {}
-    );
+    return queryInterface.bulkInsert('Cabs', CABS, {});
   },
 
   down: (queryInterface, Sequelize) => {

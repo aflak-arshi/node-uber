@@ -40,12 +40,9 @@
       "get": {
         "tags": ["User"],
         "summary": "Returns user",
-        "description": "Returns a user",
+        "description": "Get all users",
         "operationId": "getUser",
         "produces": ["application/json"],
-        "security": {
-            "JWT": []
-        },
         "parameters": [],
         "responses": {
           "200": {
@@ -58,7 +55,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
       }
     },
     "/users/login": {
@@ -91,7 +93,7 @@
       "get": {
         "tags": ["User"],
         "summary": "Find user by ID",
-        "description": "For valid response try integer IDs with value >= 1 and <= 10.         Other values will generated exceptions",
+        "description": "Retrieves a single User.",
         "operationId": "getUserId",
         "produces": ["application/xml", "application/json"],
         "parameters": [
@@ -100,17 +102,14 @@
             "in": "path",
             "description": "ID of user that needs to be fetched",
             "required": true,
-            "type": "integer",
-            "maximum": 10,
-            "minimum": 1,
-            "format": "int64"
+            "type": "integer"
           }
         ],
         "responses": {
           "200": {
             "description": "successful operation",
             "schema": {
-              "$ref": "#/definitions/Order"
+              "$ref": "#/definitions/User"
             }
           },
           "400": {
@@ -119,10 +118,120 @@
           "404": {
             "description": "User not found"
           }
-        }
-      }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "patch": {
+        "tags": ["User"],
+        "summary": "Modify user by ID",
+        "description": "Modifies an existing User",
+        "operationId": "updateUserId",
+        "produces": ["application/xml", "application/json"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of user that needs to be fetched",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Details of the user to modify. Required fields must be passed",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Invalid ID user"
+          },
+          "404": {
+            "description": "User not found"
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "delete": {
+				"summary": "Delete a user",
+				"description": "Deletes a user",
+				"tags": [
+					"User"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "id value of the user to delete",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "successful operation."
+          },
+          "400": {
+            "description": "Invalid ID user"
+          },
+          "404": {
+            "description": "User not found"
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+			}
     },
     "/cabs": {
+      "post": {
+        "tags": ["Cab"],
+        "summary": "Create a cab",
+        "description": "",
+        "operationId": "createCab",
+        "consumes": ["application/json", "application/xml"],
+        "produces": ["application/xml", "application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Cab object that needs to be added to the store",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Cab"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
       "get": {
         "tags": ["Cab"],
         "summary": "Returns cabs",
@@ -141,12 +250,189 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/cabs/{id}": {
+      "get": {
+        "tags": ["Cab"],
+        "summary": "Find cab by ID",
+        "description": "Retrieves a single Cab",
+        "operationId": "getCabId",
+        "produces": ["application/xml", "application/json"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of user that needs to be fetched",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Cab"
+            }
+          },
+          "400": {
+            "description": "Invalid ID cab"
+          },
+          "404": {
+            "description": "Cab not found"
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "patch": {
+        "tags": ["Cab"],
+        "summary": "Modify cab by ID",
+        "description": "Modifies an existing Cab",
+        "operationId": "updateCabId",
+        "produces": ["application/xml", "application/json"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of cab that needs to be fetched",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Details of the cab to modify. Required fields must be passed",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Cab"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Cab"
+            }
+          },
+          "400": {
+            "description": "Invalid ID cab"
+          },
+          "404": {
+            "description": "Cab not found"
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      },
+      "delete": {
+				"summary": "Delete a cab",
+				"description": "Deletes a cab",
+				"tags": [
+					"Cab"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "id value of the cab to delete",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "successful operation."
+          },
+          "400": {
+            "description": "Invalid ID cab"
+          },
+          "404": {
+            "description": "Cab not found"
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+			}
+    },
+    "/history": {
+      "get": {
+        "tags": ["Cab History"],
+        "summary": "Get all user cab history",
+        "description": "Retrieves all user cab history.",
+        "operationId": "getHistory",
+        "produces": ["application/xml", "application/json"],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/History"
+            }
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
+      }
+    },
+    "/history/{id}": {
+      "get": {
+        "tags": ["Cab History"],
+        "summary": "Find user cab history by ID",
+        "description": "Retrieves a single user cab history",
+        "operationId": "getCabId",
+        "produces": ["application/xml", "application/json"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of user cab history that needs to be fetched",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/History"
+            }
+          },
+          "400": {
+            "description": "Invalid ID cab"
+          },
+          "404": {
+            "description": "Cab not found"
+          }
+        },
+        "security": [
+          {
+            "Bearer": []
+          }
+        ]
       }
     }
   },
   "securityDefinitions": {
-    "JWT": {
+    "Bearer": {
       "type": "apiKey",
       "name": "Authorization",
       "in": "header"
@@ -243,6 +529,70 @@
       },
       "xml": {
         "name": "User"
+      }
+    },
+    "Cab": {
+      "type": "object",
+      "properties": {
+        "cabName": {
+          "type": "string"
+        },
+        "cabType": {
+          "type": "string"
+        },
+        "cabModel": {
+          "type": "string"
+        },
+        "cabLat": {
+          "type": "string"
+        },
+        "canLon": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "area": {
+          "type": "string"
+        },
+        "status": {
+          "type": "boolean"
+        },
+        "driverId": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "Cab"
+      }
+    },
+    "History": {
+      "type": "object",
+      "properties": {
+        "price": {
+          "type": "string"
+        },
+        "from": {
+          "type": "string"
+        },
+        "to": {
+          "type": "string"
+        },
+        "userId": {
+          "type": "string"
+        },
+        "cabId": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "History"
       }
     }
   }

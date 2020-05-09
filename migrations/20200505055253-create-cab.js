@@ -19,12 +19,16 @@ module.exports = {
       state: Sequelize.STRING,
       city: Sequelize.STRING,
       area: Sequelize.STRING,
-      userId: {
+      driverId: {
           type: Sequelize.INTEGER,
           references: {
               model: 'Users',
               key: 'id'
           },
+      },
+      status: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
       },
       createdAt: {
         allowNull: false,

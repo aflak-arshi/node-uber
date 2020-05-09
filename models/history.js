@@ -1,6 +1,8 @@
 'use strict';
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/dbConfig');
+const User = require('./user');
+const Cab = require('./cab');
 
 const History = sequelize.define(
   'History',
@@ -8,12 +10,13 @@ const History = sequelize.define(
     price: DataTypes.STRING,
     from: DataTypes.STRING,
     to: DataTypes.STRING,
+    userId: DataTypes.INTEGER,
+    cabId: DataTypes.INTEGER
   },
   {}
 );
-History.associate = function (models) {
-  History.belongsTo(models.User);
-  History.belongsTo(models.Cab);
-};
+
+History.belongsTo(User, { foreignKey: 'userId', targetKey: 'id' });
+History.belongsTo(Cab, { foreignKey: 'cabId', targetKey: 'id' });
 
 module.exports = History;
