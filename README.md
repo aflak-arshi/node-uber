@@ -1,7 +1,5 @@
 # Node.js API
 
-![Nodejs Hapi Template]
-
 ## Out of the box support for
 
 - Authorization middleware
@@ -27,4 +25,4 @@
 ### Setup
  
 - Run ``` ./setup-local.sh ```
-- This will seed the data in mysql and run the pm2 server. 
+- This will seed the data in postgresSQL and run the node server through the nodemon. 
